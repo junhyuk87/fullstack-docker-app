@@ -1,7 +1,7 @@
 version: "3"
 services:
   frontend:
-    image: smileajw1004/docker-frontend
+    image: choi4780/docker-frontend
     volumes:
       - /app/node_modules
       - ./frontend:/app
@@ -10,12 +10,12 @@ services:
 
   nginx: 
     restart: always
-    image: smileajw1004/docker-nginx
+    image: choi4780/docker-nginx
     ports: 
       - "80:80"
 
   backend:
-    image: smileajw1004/docker-backend
+    image: choi4780/docker-backend
     container_name: app_backend
     volumes:
       - /app/node_modules
